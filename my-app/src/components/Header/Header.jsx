@@ -4,12 +4,13 @@ import "./Header.scss"
 
 const Header = () => {
    const [showMenu, setShowMenu] = useState(false);
-   const [title, setTitle] = useState("Login");
+   const [title, setTitle] = useState("Log");
    const handleMenuToggle = () => {
       setShowMenu(!showMenu);
    }
+
    const changeTitle = () => {
-      setTitle("Relogin");
+      setTitle("Relog");
    }
    return (
       <div>
@@ -23,7 +24,7 @@ const Header = () => {
                      <li className="nav-item">Home</li>
                      <li className="nav-item">Shop</li>
                      <li className="nav-item">Contact</li>
-                     <li className="nav-item">About</li>
+                     <li className="nav-item"><a href="./About">About</a> </li>
                   </ul>
                </nav>
                <div className="login-container">
@@ -37,6 +38,7 @@ const Header = () => {
             </div>
          </header>
          <h3>{title}</h3>
+
       </div>
    )
 }
